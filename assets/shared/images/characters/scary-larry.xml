@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="scary-larry.png">
+	<!-- Created with Adobe Animate version 21.0.6.41649 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="scary down0000" x="0" y="0" width="5252" height="250" frameX="0" frameY="-652" frameWidth="5252" frameHeight="1141"/>
+	<SubTexture name="scary down0001" x="0" y="280" width="3671" height="346" frameX="-792" frameY="-614" frameWidth="5252" frameHeight="1141"/>
+	<SubTexture name="scary down0002" x="0" y="280" width="3671" height="346" frameX="-792" frameY="-614" frameWidth="5252" frameHeight="1141"/>
+	<SubTexture name="scary down0003" x="3701" y="280" width="833" height="1141" frameX="-2044" frameY="0" frameWidth="5252" frameHeight="1141"/>
+	<SubTexture name="scary down0004" x="3701" y="280" width="833" height="1141" frameX="-2044" frameY="0" frameWidth="5252" frameHeight="1141"/>
+	<SubTexture name="scary down0005" x="3701" y="280" width="833" height="1141" frameX="-2044" frameY="0" frameWidth="5252" frameHeight="1141"/>
+	<SubTexture name="scary down0006" x="3701" y="280" width="833" height="1141" frameX="-2044" frameY="0" frameWidth="5252" frameHeight="1141"/>
+	<SubTexture name="scary down0007" x="3701" y="280" width="833" height="1141" frameX="-2044" frameY="0" frameWidth="5252" frameHeight="1141"/>
+	<SubTexture name="scary down0008" x="3701" y="280" width="833" height="1141" frameX="-2044" frameY="0" frameWidth="5252" frameHeight="1141"/>
+	<SubTexture name="scary down0009" x="3701" y="280" width="833" height="1141" frameX="-2044" frameY="0" frameWidth="5252" frameHeight="1141"/>
+	<SubTexture name="scary down0010" x="3701" y="280" width="833" height="1141" frameX="-2044" frameY="0" frameWidth="5252" frameHeight="1141"/>
+	<SubTexture name="scary down0011" x="3701" y="280" width="833" height="1141" frameX="-2044" frameY="0" frameWidth="5252" frameHeight="1141"/>
+	<SubTexture name="scary idle0000" x="4564" y="280" width="501" height="603" frameX="0" frameY="-18" frameWidth="501" frameHeight="621"/>
+	<SubTexture name="scary idle0001" x="4564" y="280" width="501" height="603" frameX="0" frameY="-18" frameWidth="501" frameHeight="621"/>
+	<SubTexture name="scary idle0002" x="5095" y="280" width="497" height="608" frameX="-2" frameY="-13" frameWidth="501" frameHeight="621"/>
+	<SubTexture name="scary idle0003" x="5095" y="280" width="497" height="608" frameX="-2" frameY="-13" frameWidth="501" frameHeight="621"/>
+	<SubTexture name="scary idle0004" x="5622" y="280" width="493" height="612" frameX="-4" frameY="-9" frameWidth="501" frameHeight="621"/>
+	<SubTexture name="scary idle0005" x="5622" y="280" width="493" height="612" frameX="-4" frameY="-9" frameWidth="501" frameHeight="621"/>
+	<SubTexture name="scary idle0006" x="6145" y="280" width="487" height="617" frameX="-7" frameY="-4" frameWidth="501" frameHeight="621"/>
+	<SubTexture name="scary idle0007" x="6145" y="280" width="487" height="617" frameX="-7" frameY="-4" frameWidth="501" frameHeight="621"/>
+	<SubTexture name="scary idle0008" x="6662" y="280" width="483" height="621" frameX="-9" frameY="0" frameWidth="501" frameHeight="621"/>
+	<SubTexture name="scary idle0009" x="6662" y="280" width="483" height="621" frameX="-9" frameY="0" frameWidth="501" frameHeight="621"/>
+	<SubTexture name="scary idle0010" x="6662" y="280" width="483" height="621" frameX="-9" frameY="0" frameWidth="501" frameHeight="621"/>
+	<SubTexture name="scary idle0011" x="6662" y="280" width="483" height="621" frameX="-9" frameY="0" frameWidth="501" frameHeight="621"/>
+	<SubTexture name="scary idle0012" x="6662" y="280" width="483" height="621" frameX="-9" frameY="0" frameWidth="501" frameHeight="621"/>
+	<SubTexture name="scary idle0013" x="6662" y="280" width="483" height="621" frameX="-9" frameY="0" frameWidth="501" frameHeight="621"/>
+	<SubTexture name="scary left0000" x="7175" y="280" width="813" height="588" frameX="0" frameY="0" frameWidth="905" frameHeight="588"/>
+	<SubTexture name="scary left0001" x="0" y="1451" width="711" height="588" frameX="-109" frameY="0" frameWidth="905" frameHeight="588"/>
+	<SubTexture name="scary left0002" x="0" y="1451" width="711" height="588" frameX="-109" frameY="0" frameWidth="905" frameHeight="588"/>
+	<SubTexture name="scary left0003" x="741" y="1451" width="445" height="588" frameX="-460" frameY="0" frameWidth="905" frameHeight="588"/>
+	<SubTexture name="scary left0004" x="741" y="1451" width="445" height="588" frameX="-460" frameY="0" frameWidth="905" frameHeight="588"/>
+	<SubTexture name="scary left0005" x="741" y="1451" width="445" height="588" frameX="-460" frameY="0" frameWidth="905" frameHeight="588"/>
+	<SubTexture name="scary left0006" x="741" y="1451" width="445" height="588" frameX="-460" frameY="0" frameWidth="905" frameHeight="588"/>
+	<SubTexture name="scary left0007" x="741" y="1451" width="445" height="588" frameX="-460" frameY="0" frameWidth="905" frameHeight="588"/>
+	<SubTexture name="scary left0008" x="741" y="1451" width="445" height="588" frameX="-460" frameY="0" frameWidth="905" frameHeight="588"/>
+	<SubTexture name="scary left0009" x="741" y="1451" width="445" height="588" frameX="-460" frameY="0" frameWidth="905" frameHeight="588"/>
+	<SubTexture name="scary left0010" x="741" y="1451" width="445" height="588" frameX="-460" frameY="0" frameWidth="905" frameHeight="588"/>
+	<SubTexture name="scary left0011" x="741" y="1451" width="445" height="588" frameX="-460" frameY="0" frameWidth="905" frameHeight="588"/>
+	<SubTexture name="scary right0000" x="1216" y="1451" width="651" height="588" frameX="-9" frameY="0" frameWidth="660" frameHeight="588"/>
+	<SubTexture name="scary right0001" x="1897" y="1451" width="619" height="588" frameX="-7" frameY="0" frameWidth="660" frameHeight="588"/>
+	<SubTexture name="scary right0002" x="1897" y="1451" width="619" height="588" frameX="-7" frameY="0" frameWidth="660" frameHeight="588"/>
+	<SubTexture name="scary right0003" x="2546" y="1451" width="441" height="588" frameX="0" frameY="0" frameWidth="660" frameHeight="588"/>
+	<SubTexture name="scary right0004" x="2546" y="1451" width="441" height="588" frameX="0" frameY="0" frameWidth="660" frameHeight="588"/>
+	<SubTexture name="scary right0005" x="2546" y="1451" width="441" height="588" frameX="0" frameY="0" frameWidth="660" frameHeight="588"/>
+	<SubTexture name="scary right0006" x="2546" y="1451" width="441" height="588" frameX="0" frameY="0" frameWidth="660" frameHeight="588"/>
+	<SubTexture name="scary right0007" x="2546" y="1451" width="441" height="588" frameX="0" frameY="0" frameWidth="660" frameHeight="588"/>
+	<SubTexture name="scary right0008" x="2546" y="1451" width="441" height="588" frameX="0" frameY="0" frameWidth="660" frameHeight="588"/>
+	<SubTexture name="scary right0009" x="2546" y="1451" width="441" height="588" frameX="0" frameY="0" frameWidth="660" frameHeight="588"/>
+	<SubTexture name="scary right0010" x="2546" y="1451" width="441" height="588" frameX="0" frameY="0" frameWidth="660" frameHeight="588"/>
+	<SubTexture name="scary right0011" x="2546" y="1451" width="441" height="588" frameX="0" frameY="0" frameWidth="660" frameHeight="588"/>
+	<SubTexture name="scary up0000" x="3017" y="1451" width="498" height="1077" frameX="-151" frameY="0" frameWidth="833" frameHeight="1077"/>
+	<SubTexture name="scary up0001" x="3545" y="1451" width="605" height="1032" frameX="-99" frameY="-40" frameWidth="833" frameHeight="1077"/>
+	<SubTexture name="scary up0002" x="3545" y="1451" width="605" height="1032" frameX="-99" frameY="-40" frameWidth="833" frameHeight="1077"/>
+	<SubTexture name="scary up0003" x="4180" y="1451" width="833" height="870" frameX="0" frameY="-153" frameWidth="833" frameHeight="1077"/>
+	<SubTexture name="scary up0004" x="4180" y="1451" width="833" height="870" frameX="0" frameY="-153" frameWidth="833" frameHeight="1077"/>
+	<SubTexture name="scary up0005" x="4180" y="1451" width="833" height="870" frameX="0" frameY="-153" frameWidth="833" frameHeight="1077"/>
+	<SubTexture name="scary up0006" x="4180" y="1451" width="833" height="870" frameX="0" frameY="-153" frameWidth="833" frameHeight="1077"/>
+	<SubTexture name="scary up0007" x="4180" y="1451" width="833" height="870" frameX="0" frameY="-153" frameWidth="833" frameHeight="1077"/>
+	<SubTexture name="scary up0008" x="4180" y="1451" width="833" height="870" frameX="0" frameY="-153" frameWidth="833" frameHeight="1077"/>
+	<SubTexture name="scary up0009" x="4180" y="1451" width="833" height="870" frameX="0" frameY="-153" frameWidth="833" frameHeight="1077"/>
+	<SubTexture name="scary up0010" x="4180" y="1451" width="833" height="870" frameX="0" frameY="-153" frameWidth="833" frameHeight="1077"/>
+	<SubTexture name="scary up0011" x="4180" y="1451" width="833" height="870" frameX="0" frameY="-153" frameWidth="833" frameHeight="1077"/>
+</TextureAtlas>
