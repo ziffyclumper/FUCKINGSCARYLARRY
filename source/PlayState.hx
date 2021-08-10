@@ -534,6 +534,23 @@ class PlayState extends MusicBeatState
 						evilSnow.antialiasing = true;
 					add(evilSnow);
 					}
+			case 'sewer':
+				curStage = 'sewer';
+
+				defaultCamZoom = 0.9;
+
+				var bg = new FlxSprite(-516.2, -686.45).loadGraphic(Paths.image('sewer/bg', 'larry'));
+				bg.antialiasing = true;
+				bg.updateHitbox();
+				bg.scrollFactor.set(0.8, 0.8);
+				add(bg);
+
+				var fg = new FlxSprite(-509.9, -612.75).loadGraphic(Paths.image('sewer/fg', 'larry'));
+				fg.antialiasing = true;
+				fg.updateHitbox();
+				bg.scrollFactor.set(1, 1);
+				add(fg);
+
 			case 'school':
 			{
 					curStage = 'school';
@@ -801,6 +818,10 @@ class PlayState extends MusicBeatState
 				boyfriend.y += 220;
 				gf.x += 180;
 				gf.y += 300;
+			case 'sewer':
+				boyfriend.setPosition(890.2, 262.55);
+				dad.setPosition(39.2, 48.65);
+				gf.setPosition(345.75, -118.45);
 			case 'schoolEvil':
 				if(FlxG.save.data.distractions){
 				// trailArea.scrollFactor.set();
