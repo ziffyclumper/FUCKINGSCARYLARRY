@@ -190,10 +190,20 @@ class FreeplayState extends MusicBeatState
 			changeSelection(1);
 		}
 
-		if (controls.LEFT_P)
-			changeDiff(-1);
-		if (controls.RIGHT_P)
-			changeDiff(1);
+		if(songs[curSelected].songName.toLowerCase() == "tutorial") {
+			if (controls.LEFT_P)
+				changeDiff(-1);
+			if (controls.RIGHT_P)
+				changeDiff(1);
+		}
+		else {
+			curDifficulty = 2;
+			changeDiff();
+			if (controls.LEFT_P)
+				changeDiff(0);
+			if (controls.RIGHT_P)
+				changeDiff(0);
+		}
 
 		if (controls.BACK)
 		{
