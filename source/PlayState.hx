@@ -779,6 +779,9 @@ class PlayState extends MusicBeatState
 
 			case "spooky":
 				dad.y += 200;
+			case "scary-larry":
+				dad.x -= 7000;
+				
 			case "monster":
 				dad.y += 100;
 			case 'monster-christmas':
@@ -2077,6 +2080,9 @@ class PlayState extends MusicBeatState
 					case 'senpai-angry':
 						camFollow.y = dad.getMidpoint().y - 430;
 						camFollow.x = dad.getMidpoint().x - 100;
+					case 'scary-larry':
+						camFollow.y = dad.getMidpoint().y + 25;
+						camFollow.x = dad.getMidpoint().x + 300;
 				}
 
 				if (dad.curCharacter == 'mom')
