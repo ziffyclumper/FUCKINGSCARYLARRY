@@ -151,10 +151,10 @@ class Character extends FlxSprite
 				animation.addByPrefix('singLEFT', 'scary left', 24);
 
 				addOffset("idle", -2500, -300);
-				addOffset("singUP", -2451, -91);
-				addOffset("singRIGHT", -2563, -316);
-				addOffset("singLEFT", -2390, -318);
-				addOffset("singDOWN", -2269, -330);
+				addOffset("singUP", -2487, -171);
+				addOffset("singRIGHT", -2551, -313);
+				addOffset("singLEFT", -2398, -320);
+				addOffset("singDOWN", -2145, -322);
 
 				playAnim('idle');
 			
@@ -165,7 +165,7 @@ class Character extends FlxSprite
 				animation.addByPrefix('singUP', 'spooky UP NOTE', 24, false);
 				animation.addByPrefix('singDOWN', 'spooky DOWN note', 24, false);
 				animation.addByPrefix('singLEFT', 'note sing left', 24, false);
-				animation.addByPrefix('singRIGHT', 'spooky sing right', 24, false);
+					animation.addByPrefix('singRIGHT', 'spooky sing right', 24, false);
 				animation.addByIndices('danceLeft', 'spooky dance idle', [0, 2, 6], "", 12, false);
 				animation.addByIndices('danceRight', 'spooky dance idle', [8, 10, 12, 14], "", 12, false);
 
