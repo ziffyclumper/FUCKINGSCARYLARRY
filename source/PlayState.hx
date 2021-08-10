@@ -91,7 +91,7 @@ class PlayState extends MusicBeatState
 	var halloweenLevel:Bool = false;
 
 	var songLength:Float = 0;
-	var kadeEngineWatermark:FlxText;
+	//var kadeEngineWatermark:FlxText;
 	
 	#if windows
 	// Discord RPC variables
@@ -537,19 +537,31 @@ class PlayState extends MusicBeatState
 			case 'sewer':
 				curStage = 'sewer';
 
-				defaultCamZoom = 0.9;
+				defaultCamZoom = 0.8;
 
 				var bg = new FlxSprite(-516.2, -686.45).loadGraphic(Paths.image('sewer/bg', 'larry'));
 				bg.antialiasing = true;
 				bg.updateHitbox();
-				bg.scrollFactor.set(0.8, 0.8);
+				bg.active = false;
+				bg.scrollFactor.set(1, 1);
 				add(bg);
 
-				var fg = new FlxSprite(-509.9, -612.75).loadGraphic(Paths.image('sewer/fg', 'larry'));
+				var fgWater = new FlxSprite(589.9, -191.5);
+				fgWater.antialiasing = true;
+				fgWater.frames = Paths.getSparrowAtlas('sewer/Scary Wotor', 'larry');
+				fgWater.updateHitbox();
+				fgWater.setGraphicSize(Std.int(fgWater.width * 1.95));
+				fgWater.animation.addByPrefix('idle', 'Wotor', 24, true);
+				fgWater.animation.play('idle');
+				fgWater.scrollFactor.set(1, 1);
+				add(fgWater);
+
+				var fg = new FlxSprite(-509.9, -661.7).loadGraphic(Paths.image('sewer/fg', 'larry'));
 				fg.antialiasing = true;
 				fg.updateHitbox();
 				bg.scrollFactor.set(1, 1);
 				add(fg);
+
 
 			case 'school':
 			{
@@ -820,7 +832,7 @@ class PlayState extends MusicBeatState
 				gf.y += 300;
 			case 'sewer':
 				boyfriend.setPosition(890.2, 262.55);
-				dad.setPosition(39.2, 48.65);
+				dad.setPosition(-2500, -250);
 				gf.setPosition(345.75, -118.45);
 			case 'schoolEvil':
 				if(FlxG.save.data.distractions){
@@ -944,13 +956,10 @@ class PlayState extends MusicBeatState
 		add(healthBar);
 
 		// Add Kade Engine watermark
-		kadeEngineWatermark = new FlxText(4,healthBarBG.y + 50,0,SONG.song + " " + (storyDifficulty == 2 ? "Hard" : storyDifficulty == 1 ? "Normal" : "Easy") + (Main.watermarks ? " - KE " + MainMenuState.kadeEngineVer : ""), 16);
-		kadeEngineWatermark.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
-		kadeEngineWatermark.scrollFactor.set();
-		add(kadeEngineWatermark);
-
-		if (FlxG.save.data.downscroll)
-			kadeEngineWatermark.y = FlxG.height * 0.9 + 45;
+		//kadeEngineWatermark = new FlxText(4,healthBarBG.y + 50,0,SONG.song + " " + (storyDifficulty == 2 ? "Hard" : storyDifficulty == 1 ? "Normal" : "Easy") + (Main.watermarks ? " - KE " + MainMenuState.kadeEngineVer : ""), 16);
+		//kadeEngineWatermark.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
+		//kadeEngineWatermark.scrollFactor.set();
+		//add(kadeEngineWatermark);
 
 		scoreTxt = new FlxText(FlxG.width / 2 - 235, healthBarBG.y + 50, 0, "", 20);
 		if (!FlxG.save.data.accuracyDisplay)
@@ -997,7 +1006,7 @@ class PlayState extends MusicBeatState
 			songPosBG.cameras = [camHUD];
 			songPosBar.cameras = [camHUD];
 		}
-		kadeEngineWatermark.cameras = [camHUD];
+		//kadeEngineWatermark.cameras = [camHUD];
 		if (loadRep)
 			replayTxt.cameras = [camHUD];
 
@@ -1732,7 +1741,7 @@ class PlayState extends MusicBeatState
 			if (luaModchart.getVar("showOnlyStrums",'bool'))
 			{
 				healthBarBG.visible = false;
-				kadeEngineWatermark.visible = false;
+				//kadeEngineWatermark.visible = false;
 				healthBar.visible = false;
 				iconP1.visible = false;
 				iconP2.visible = false;
@@ -1741,7 +1750,7 @@ class PlayState extends MusicBeatState
 			else
 			{
 				healthBarBG.visible = true;
-				kadeEngineWatermark.visible = true;
+				//kadeEngineWatermark.visible = true;
 				healthBar.visible = true;
 				iconP1.visible = true;
 				iconP2.visible = true;
@@ -2059,6 +2068,9 @@ class PlayState extends MusicBeatState
 				{
 					case 'mom':
 						camFollow.y = dad.getMidpoint().y;
+					case 'scary-larry':
+						camFollow.y = boyfriend.getMidpoint().y - 200;
+						camFollow.x = dad.getMidpoint().x + 420;
 					case 'senpai':
 						camFollow.y = dad.getMidpoint().y - 430;
 						camFollow.x = dad.getMidpoint().x - 100;
@@ -2100,6 +2112,8 @@ class PlayState extends MusicBeatState
 						camFollow.y = boyfriend.getMidpoint().y - 200;
 					case 'schoolEvil':
 						camFollow.x = boyfriend.getMidpoint().x - 200;
+						camFollow.y = boyfriend.getMidpoint().y - 200;
+					case 'sewer':
 						camFollow.y = boyfriend.getMidpoint().y - 200;
 				}
 			}
@@ -2546,7 +2560,6 @@ class PlayState extends MusicBeatState
 	var offsetTest:Float = 0;
 
 	var timeShown = 0;
-	var currentTimingShown:FlxText = null;
 
 	private function popUpScore(daNote:Note):Void
 		{
@@ -2651,25 +2664,8 @@ class PlayState extends MusicBeatState
 			var msTiming = HelperFunctions.truncateFloat(noteDiff, 3);
 			if(FlxG.save.data.botplay) msTiming = 0;							   
 
-			if (currentTimingShown != null)
-				remove(currentTimingShown);
 
-			currentTimingShown = new FlxText(0,0,0,"0ms");
 			timeShown = 0;
-			switch(daRating)
-			{
-				case 'shit' | 'bad':
-					currentTimingShown.color = FlxColor.RED;
-				case 'good':
-					currentTimingShown.color = FlxColor.GREEN;
-				case 'sick':
-					currentTimingShown.color = FlxColor.CYAN;
-			}
-			currentTimingShown.borderStyle = OUTLINE;
-			currentTimingShown.borderSize = 1;
-			currentTimingShown.borderColor = FlxColor.BLACK;
-			currentTimingShown.text = msTiming + "ms";
-			currentTimingShown.size = 20;
 
 			if (msTiming >= 0.03 && offsetTesting)
 			{
@@ -2691,11 +2687,6 @@ class PlayState extends MusicBeatState
 				
 				offsetTest = HelperFunctions.truncateFloat(total / hits.length,2);
 			}
-
-			if (currentTimingShown.alpha != 1)
-				currentTimingShown.alpha = 1;
-
-			if(!FlxG.save.data.botplay) add(currentTimingShown);
 			
 			var comboSpr:FlxSprite = new FlxSprite().loadGraphic(Paths.image(pixelShitPart1 + 'combo' + pixelShitPart2));
 			comboSpr.screenCenter();
@@ -2704,14 +2695,8 @@ class PlayState extends MusicBeatState
 			comboSpr.acceleration.y = 600;
 			comboSpr.velocity.y -= 150;
 
-			currentTimingShown.screenCenter();
-			currentTimingShown.x = comboSpr.x + 100;
-			currentTimingShown.y = rating.y + 100;
-			currentTimingShown.acceleration.y = 600;
-			currentTimingShown.velocity.y -= 150;
 	
 			comboSpr.velocity.x += FlxG.random.int(1, 10);
-			currentTimingShown.velocity.x += comboSpr.velocity.x;
 			if(!FlxG.save.data.botplay) add(rating);
 	
 			if (!curStage.startsWith('school'))
@@ -2727,11 +2712,9 @@ class PlayState extends MusicBeatState
 				comboSpr.setGraphicSize(Std.int(comboSpr.width * daPixelZoom * 0.7));
 			}
 	
-			currentTimingShown.updateHitbox();
 			comboSpr.updateHitbox();
 			rating.updateHitbox();
 	
-			currentTimingShown.cameras = [camHUD];
 			comboSpr.cameras = [camHUD];
 			rating.cameras = [camHUD];
 
@@ -2797,8 +2780,6 @@ class PlayState extends MusicBeatState
 				startDelay: Conductor.crochet * 0.001,
 				onUpdate: function(tween:FlxTween)
 				{
-					if (currentTimingShown != null)
-						currentTimingShown.alpha -= 0.02;
 					timeShown++;
 				}
 			});
@@ -2808,11 +2789,6 @@ class PlayState extends MusicBeatState
 				{
 					coolText.destroy();
 					comboSpr.destroy();
-					if (currentTimingShown != null && timeShown >= 20)
-					{
-						remove(currentTimingShown);
-						currentTimingShown = null;
-					}
 					rating.destroy();
 				},
 				startDelay: Conductor.crochet * 0.001

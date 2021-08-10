@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Scary Wotor.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Wotor0000" x="10" y="10" width="891" height="570" frameX="-6" frameY="-1" frameWidth="903" frameHeight="571"/>
+	<SubTexture name="Wotor0001" x="10" y="10" width="891" height="570" frameX="-6" frameY="-1" frameWidth="903" frameHeight="571"/>
+	<SubTexture name="Wotor0002" x="911" y="10" width="891" height="477" frameX="-5" frameY="-13" frameWidth="903" frameHeight="571"/>
+	<SubTexture name="Wotor0003" x="911" y="10" width="891" height="477" frameX="-5" frameY="-13" frameWidth="903" frameHeight="571"/>
+	<SubTexture name="Wotor0004" x="10" y="590" width="903" height="477" frameX="0" frameY="0" frameWidth="903" frameHeight="571"/>
+	<SubTexture name="Wotor0005" x="10" y="590" width="903" height="477" frameX="0" frameY="0" frameWidth="903" frameHeight="571"/>
+</TextureAtlas>
