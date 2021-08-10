@@ -767,6 +767,9 @@ class PlayState extends MusicBeatState
 
 			case "spooky":
 				dad.y += 200;
+			case "scary-larry":
+				dad.x -= 7000;
+				
 			case "monster":
 				dad.y += 100;
 			case 'monster-christmas':
@@ -820,7 +823,7 @@ class PlayState extends MusicBeatState
 				gf.y += 300;
 			case 'sewer':
 				boyfriend.setPosition(890.2, 262.55);
-				dad.setPosition(39.2, 48.65);
+				dad.setPosition(-2500, -250);
 				gf.setPosition(345.75, -118.45);
 			case 'schoolEvil':
 				if(FlxG.save.data.distractions){
@@ -2065,6 +2068,9 @@ class PlayState extends MusicBeatState
 					case 'senpai-angry':
 						camFollow.y = dad.getMidpoint().y - 430;
 						camFollow.x = dad.getMidpoint().x - 100;
+					case 'scary-larry':
+						camFollow.y = dad.getMidpoint().y + 25;
+						camFollow.x = dad.getMidpoint().x + 300;
 				}
 
 				if (dad.curCharacter == 'mom')
